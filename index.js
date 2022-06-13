@@ -50,9 +50,9 @@ const textArr = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t1
 const circleArr = [c1, c2, c3, c4]
 
 // All div link contain here. You can change any time
-//const divLinkArr = ["https://www.google.com/", "https://www.youtube.com/", "https://twitter.com/", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"]
+const divLinkArr = ["https://www.google.com/", "https://www.youtube.com/", "https://twitter.com/", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"]
 // All Circle link contain here. You can change any time
-//const circleLinkArr = ["https://www.fiverr.com/", "https://www.freelancer.com/", "https://twitter.com/", "https://web.facebook.com/"]
+const circleLinkArr = ["https://www.fiverr.com/", "https://www.freelancer.com/", "https://twitter.com/", "https://web.facebook.com/"]
 const hoverEffect = (e, url) => {
     e.forEach((div) => {
         div.addEventListener("click", () => {
@@ -180,11 +180,11 @@ const circleHoverEffect = (e, url) => {
 
 }
 
-/*
+
 for (let i = 0; i < divArr.length; i++) {
     hoverEffect(divArr[i], divLinkArr[i])
 }
 
 for (let i = 0; i < circleArr.length; i++) {
     circleHoverEffect(circleArr[i], circleLinkArr[i])
-}*/
+}
