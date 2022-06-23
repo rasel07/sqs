@@ -18,6 +18,7 @@ const d17 = document.querySelectorAll("#div-17 path");
 const d18 = document.querySelectorAll("#div-18 path");
 const d19 = document.querySelectorAll("#div-19 path");
 const d20 = document.querySelectorAll("#div-20 path");
+
 const t1 = document.querySelectorAll("#text-1 path");
 const t2 = document.querySelectorAll("#text-2 path");
 const t3 = document.querySelectorAll("#text-3 path");
@@ -45,14 +46,29 @@ const c2 = document.querySelectorAll("#circle-2 path");
 const c3 = document.querySelectorAll("#circle-3 path");
 const c4 = document.querySelectorAll("#circle-4 path");
 
+const c1_text = document.querySelector("#circle1-hover-text");
+const c2_text = document.querySelector("#circle2-hover-text");
+const c3_text = document.querySelector("#circle3-hover-text");
+const c4_text = document.querySelector("#circle4-hover-text");
+
 const divArr = [d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19, d20]
 const textArr = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15, t16, t17, t18, t19, t20]
 const circleArr = [c1, c2, c3, c4]
+const circleTextArr = [c1_text, c2_text, c3_text, c4_text]
 
 // All div link contain here. You can change any time
-const divLinkArr = ["https://www.google.com/", "https://www.youtube.com/", "https://twitter.com/", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"]
+const divLinkArr = ["/segmentation", "/profiling-1", "https://twitter.com/", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"]
 // All Circle link contain here. You can change any time
-const circleLinkArr = ["https://www.fiverr.com/", "https://www.freelancer.com/", "https://twitter.com/", "https://web.facebook.com/"]
+const circleLinkArr = ["/who2", "/what1", "/where", "/why"]
+
+const circleHoverTextHide = (div) => {
+    div.style.display = "none"
+}
+
+circleTextArr.map((element) => {
+    circleHoverTextHide(element)
+})
+
 const hoverEffect = (e, url) => {
     e.forEach((div) => {
         div.addEventListener("click", () => {
@@ -96,41 +112,38 @@ const hoverEffect = (e, url) => {
 
 }
 
-
-
-
 const circleHoverEffect = (e, url) => {
     if (e == c1) { var arr = [0, 1, 2, 3, 4] }
-    if (e == c2) { var arr = [5, 6, 7, 8, 9] }
-    if (e == c3) { var arr = [10, 11, 12, 13, 14] }
-    if (e == c4) { var arr = [15, 16, 17, 18, 19] }
+    if (e == c2) { var arr = [5, 6, 7, 8, 9, 10, 11] }
+    if (e == c3) { var arr = [12, 13, 14, 15] }
+    if (e == c4) { var arr = [16, 17, 18, 19] }
     e.forEach((div) => {
         div.addEventListener("click", () => {
             window.open(url)
         })
         div.addEventListener("mouseover", () => {
             for (let i = 0; i < divArr.length; i++) {
-                if (i == arr[0] || i == arr[1] || i == arr[2] || i == arr[3] || i == arr[4]) {
+                textArr[i].forEach((div) => {
+                    div.style.display = "none"
+                })
+                if (i == arr[0] || i == arr[1] || i == arr[2] || i == arr[3] || i == arr[4] || i == arr[5] || i == arr[6]) {
                     continue
                 }
                 else {
                     divArr[i].forEach((div) => {
                         div.style.fillOpacity = "0.5"
                     })
-                    textArr[i].forEach((div) => {
-                        div.style.display = "none"
-                    })
                 }
             }
 
             for (let i = 0; i < circleArr.length; i++) {
                 if (circleArr[i] == e) {
+                    circleTextArr[i].style.display = "block"
                     continue;
                 }
                 else {
                     for (let j = 0; j < circleArr[i].length; j++) {
-                        console.log(circleArr[j].id)
-                        if (circleArr[i][j].id == "Vector_193" || circleArr[i][j].id == "Vector_196" || circleArr[i][j].id == "Vector_199" || circleArr[i][j].id == "Vector_202") {
+                        if (j == 2) {
                             circleArr[i][j].style.fill = "white"
                         }
                         else {
@@ -162,11 +175,12 @@ const circleHoverEffect = (e, url) => {
 
             for (let i = 0; i < circleArr.length; i++) {
                 if (circleArr[i] == e) {
+                    circleTextArr[i].style.display = "none"
                     continue;
                 }
                 else {
                     for (let j = 0; j < circleArr[i].length; j++) {
-                        if (circleArr[i][j].id == "Vector_193" || circleArr[i][j].id == "Vector_196" || circleArr[i][j].id == "Vector_199" || circleArr[i][j].id == "Vector_202") {
+                        if (j == 2) {
                             circleArr[i][j].style.fill = ""
                         }
                         else {
