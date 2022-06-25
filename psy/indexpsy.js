@@ -51,7 +51,7 @@ const allArrow = [arrow1, arrow2, arrow3, arrow4, arrow5, arrow6];
 const allOutlineText = [outline_text1, outline_text2, outline_text3, outline_text4, outline_text5, outline_text6]
 const allHover = [hover1, hover2, hover3, hover4, hover5, hover6];
 
-const sectionLinkArr = ["https://www.google.com/", "https://www.youtube.com/", "https://twitter.com/", "https://www.fiverr.com/", "https://www.freelancer.com/", "https://twitter.com/"]
+//const sectionLinkArr = ["https://www.google.com/", "https://www.youtube.com/", "https://twitter.com/", "https://www.fiverr.com/", "https://www.freelancer.com/", "https://twitter.com/"]
 
 allHover.map((hover) => {
     hover.style.fill = "transparent";
@@ -165,8 +165,8 @@ for (let i = 0; i < allHoverSection.length; i++) {
 }
 
 
-for (let i = 0; i < allArrow.length; i++) {
-    hoverSectionAnimation(allHover[i], sectionLinkArr[i], i)
-    hoverSectionAnimation(allOutlineText[i], sectionLinkArr[i], i)
-}
+//for (let i = 0; i < allArrow.length; i++) {
+   // hoverSectionAnimation(allHover[i], sectionLinkArr[i], i)
+   // hoverSectionAnimation(allOutlineText[i], sectionLinkArr[i], i)
+//}
 
