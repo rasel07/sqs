@@ -56,10 +56,6 @@ const textArr = [t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t1
 const circleArr = [c1, c2, c3, c4]
 const circleTextArr = [c1_text, c2_text, c3_text, c4_text]
 
-// All div link contain here. You can change any time
-const divLinkArr = ["/segmentation", "/profiling-1", "https://twitter.com/", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"]
-// All Circle link contain here. You can change any time
-const circleLinkArr = ["/who2", "/what1", "/where", "/why"]
 
 const circleHoverTextHide = (div) => {
     div.style.display = "none"
@@ -195,10 +191,10 @@ const circleHoverEffect = (e, url) => {
 }
 
 
-for (let i = 0; i < divArr.length; i++) {
-    hoverEffect(divArr[i], divLinkArr[i])
-}
 
-for (let i = 0; i < circleArr.length; i++) {
-    circleHoverEffect(circleArr[i], circleLinkArr[i])
-}
+
+
+
+
+
+
